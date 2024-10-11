@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Blog Editor</title>
+    <style>
+      .container {
+        display: flex;
+      }
+
+      .editor,
+      .live-view {
+        width: 50%;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      #title,
+      #description,
+      #content {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      #title,
+      #description {
+        padding: 10px;
+      }
+
+      #content {
+        height: 200px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="editor">
+        <input id="title" oninput="updateLiveView()" type="text" placeholder="Enter title here" value="" />
+        <input id="description" oninput="updateLiveView()" type="text" placeholder="Enter description here" />
+        <textarea id="content" placeholder="Enter content here"></textarea>
+      </div>
+      <div class="live-view">
+        <h1 id="live-title">Enter title here</h1>
+        <h3 id="live-description">Enter description here</h3>
+        <p id="live-content">Enter content here</p>
+      </div>
+    </div>
+    <script src="./scripts/advanced-javascript/security-topic/lesson-2.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Product Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .product-grid {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .product {
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin: 10px;
+        flex-basis: calc(33.333% - 30px);
+      }
+
+      .cart {
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product-grid">
+      <div class="product" data-price="300">
+        <h3>Phone A</h3>
+        <p>$300</p>
+        <p>High-quality smartphone with amazing camera</p>
+        <input type="checkbox" onclick="updateCart()" class="product-checkbox" />
+      </div>
+      <div class="product" data-price="400">
+        <h3>Phone B</h3>
+        <p>$400</p>
+        <p>Powerful smartphone with extended battery life</p>
+        <input type="checkbox" onclick="updateCart()" class="product-checkbox" />
+      </div>
+      <div class="product" data-price="500">
+        <h3>Phone C</h3>
+        <p>$500</p>
+        <p>Flagship smartphone with an immersive display</p>
+        <input type="checkbox" onclick="updateCart()" class="product-checkbox" />
+      </div>
+      <div class="product" data-price="600">
+        <h3>Phone D</h3>
+        <p>$600</p>
+        <p>High-performance smartphone with innovative features</p>
+        <input type="checkbox" onclick="updateCart()" class="product-checkbox" />
+      </div>
+    </div>
+    <div class="cart">
+      <h3>Cart Total: $<span id="cart-total">0</span></h3>
+    </div>
+    <script src="./scripts/advanced-javascript/security-topic/lesson-1.js"></script>
+  </body>
+</html>
